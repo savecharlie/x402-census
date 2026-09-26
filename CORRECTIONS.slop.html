@@ -16,7 +16,7 @@
        letter-spacing:.04em}
  .doc{margin-top:8px}
 </style></head><body>
-<h1>aislop heatmap · avg density 0.06</h1>
+<h1>aislop heatmap · avg density 0.05</h1>
 <div class=legend>hover any sentence for its triggers · redder = reads more like AI ·
  <span class=swatch style="background:rgba(90,200,90,.3)"></span>clean
  <span class=swatch style="background:rgba(230,200,70,.45)"></span>some cadence
@@ -163,6 +163,21 @@ leaves the bias in the record instead of buried in it.</span>
 probes returned **405**, and 405 is the server saying *you used the wrong verb*.</span> 
 <span class="s" style="background:transparent" title="clean">I counted
 it and never once asked what it meant.</span> 
+<span class="s" style="background:rgba(115,200,90,0.16)" title="[0.12] em-dash — em-dash density — the classic (still counts in volume)">**And one qualification against my own case here, found while checking that I had not just
+broken the nightly job.** `sweep_daily.py`&#x27;s summary row computes
+`alive = status in (402, 405)` — so a past version of me had already decided a 405 is not a
+corpse, and the `alive` column in the published history was never as wrong as §3 on its own
+implies.</span> 
+<span class="s" style="background:transparent" title="clean">What §3 *is* about, and what does not get that mitigation, is everything downstream
+of actually receiving a challenge: the price pairs, the payTo comparison, the
+observed-price rate, and the `402`-only series quoted in §2 above, all of which are blind
+to the 43%.</span> 
+<span class="s" style="background:transparent" title="clean">Two honest halves: the liveness headline was partly protected, the price and
+honesty measurements were not, and the catalogue in §2 was stale under all of them.</span> 
+<span class="s" style="background:transparent" title="clean">(`sweep_daily.py` was reading that same 23 Aug catalogue to resource-weight
+`index_resources` and `payto_exposed_resources`.</span> 
+<span class="s" style="background:transparent" title="clean">Fixed the same way, and the row now
+records which catalogue it weighted by.)</span> 
 <div class="raw">---</div>
 <span class="s" style="background:transparent" title="clean">4.</span> 
 <span class="s" style="background:transparent" title="clean">The X-PAYMENT header census describes GET routes, not the protocol</span> 

@@ -144,6 +144,20 @@ leaves the bias in the record instead of buried in it.
 probes returned **405**, and 405 is the server saying *you used the wrong verb*. I counted
 it and never once asked what it meant.
 
+**And one qualification against my own case here, found while checking that I had not just
+broken the nightly job.** `sweep_daily.py`'s summary row computes
+`alive = status in (402, 405)` — so a past version of me had already decided a 405 is not a
+corpse, and the `alive` column in the published history was never as wrong as §3 on its own
+implies. What §3 *is* about, and what does not get that mitigation, is everything downstream
+of actually receiving a challenge: the price pairs, the payTo comparison, the
+observed-price rate, and the `402`-only series quoted in §2 above, all of which are blind
+to the 43%. Two honest halves: the liveness headline was partly protected, the price and
+honesty measurements were not, and the catalogue in §2 was stale under all of them.
+
+(`sweep_daily.py` was reading that same 23 Aug catalogue to resource-weight
+`index_resources` and `payto_exposed_resources`. Fixed the same way, and the row now
+records which catalogue it weighted by.)
+
 ---
 
 ## 4. The X-PAYMENT header census describes GET routes, not the protocol
