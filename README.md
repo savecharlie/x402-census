@@ -19,7 +19,18 @@ pull_index.py         snapshot the CDP discovery index to a dated .gz
 whatsells.py          revenue, categories and sellers, with the three index traps handled
 pricebands.py         what each price point actually earns, and from how many strangers
 discovery_2026*.gz    two full index snapshots, 4 Sep and 26 Sep
+
+CORRECTIONS.md        four things these numbers got wrong, and the fixes
+reconcile.py          count the index every plausible way -- 'endpoint' is 2x ambiguous
+method_bias.py        paired GET-vs-declared-method probe; a GET census misses 43% of POST
 ```
+
+**[CORRECTIONS.md](CORRECTIONS.md) is not an appendix, read it with the rest.** Two of the
+instruments here were broken and three headline numbers described a fixed cohort while
+claiming to describe a market: the nightly liveness sweep spent 34 days probing an August
+catalogue (62% of it now delisted), a GET-only prober cannot see 43% of the POST routes
+that are half this index, and the $142/day to $357/day jump is listing churn, not growth --
+the routes present on both dates gained 7% of revenue and lost 8% of their payers.
 
 **[WHAT_SELLS.md](WHAT_SELLS.md) is the companion piece** and answers the question this
 one raised. Short version: the entire declared x402 market is $357 a day, nineteen hosts

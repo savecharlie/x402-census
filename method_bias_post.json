@@ -1,0 +1,10 @@
+{
+ "snapshot": "discovery_20260926.json.gz",
+ "declared_method": "POST",
+ "sampled": 150,
+ "quoted_to_get": 80,
+ "quoted_to_declared": 145,
+ "declared_only": 65,
+ "both": 80,
+ "neither": 5
+}
