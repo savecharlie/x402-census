@@ -13,7 +13,18 @@ samples/              raw per-payment records (3 days; see the last section)
 x402_census.py        the sampler -- python3 x402_census.py 150 43200 out.json
 census_daily.py       the nightly wrapper that appends a row
 base_rpc.py           public Base RPC, no key needed
+
+WHAT_SELLS.md         the supply side: price bands across the whole discovery index
+pull_index.py         snapshot the CDP discovery index to a dated .gz
+whatsells.py          revenue, categories and sellers, with the three index traps handled
+pricebands.py         what each price point actually earns, and from how many strangers
+discovery_2026*.gz    two full index snapshots, 4 Sep and 26 Sep
 ```
+
+**[WHAT_SELLS.md](WHAT_SELLS.md) is the companion piece** and answers the question this
+one raised. Short version: the entire declared x402 market is $357 a day, nineteen hosts
+earn more than two dollars a day, and the median route at *any* price is called about one
+and a half times per buyer. Being cheap buys nothing.
 
 No API key, no archive node, no paid provider. It runs against public RPC.
 
